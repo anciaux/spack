@@ -49,3 +49,7 @@ class Libmultiscale(CMakePackage):
             '-DLIBMULTISCALE_TESTS:BOOL=ON'
         ]
         return args
+
+    def cmake(self, spec, prefix):
+        super().cmake(spec, prefix)
+        super().cmake(spec, prefix)
