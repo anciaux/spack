@@ -34,7 +34,8 @@ class Libmultiscale(CMakePackage):
 
     version('lammps_2020', branch='lammps_2020')
 
-    depends_on('akantu@master', 'eigen')
+    depends_on('akantu@master')
+    depends_on('eigen')
 
     def cmake_args(self):
         spec = self.spec
