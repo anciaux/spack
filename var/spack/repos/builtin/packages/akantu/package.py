@@ -14,13 +14,14 @@ class Akantu(CMakePackage):
 
     """
     homepage = "https://akantu.ch"
-    url      = "https://gitlab.com/akantu/akantu/-/archive/v3.0.0/akantu-v3.0.0.tar.gz"
-    git      = "https://gitlab.com/akantu/akantu.git"
+    url = "https://gitlab.com/akantu/akantu/-/archive/v3.0.0/akantu-v3.0.0.tar.gz"
+    git = "https://gitlab.com/akantu/akantu.git"
 
     maintainers = ['nrichart']
 
     version('master', branch='master')
-    version('3.0.0', sha256='7e8f64e25956eba44def1b2d891f6db8ba824e4a82ff0d51d6b585b60ab465db')
+    version(
+        '3.0.0', sha256='7e8f64e25956eba44def1b2d891f6db8ba824e4a82ff0d51d6b585b60ab465db')
 
     variant('external_solvers', values=any_combination_of('mumps', 'petsc'),
             description="Activates the implicit solver")
@@ -31,6 +32,7 @@ class Akantu(CMakePackage):
 
     depends_on('boost@:1.66', when='@:3.0.99')
     depends_on('boost')
+    depends_on('zlib')
     depends_on('lapack')
     depends_on('cmake@3.5.1:', type='build')
     depends_on('python', when='+python', type=('build', 'run'))
@@ -80,6 +82,8 @@ class Akantu(CMakePackage):
             args.append('-DMUMPS_DIR:PATH=${0}'.format(spec['mumps'].prefix))
         if spec.satisfies('external_solvers=petsc'):
             solvers.append('PETSc')
+
+        args.append('-DZLIB_DIR:PATH=${0}'.format(spec['zlib'].prefix))
 
         if len(solvers) > 0:
             args.extend([

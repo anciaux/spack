@@ -32,10 +32,9 @@ class Libmultiscale(CMakePackage):
 
     maintainers = ['anciaux']
 
-    version('lammps_2020', branch='lammps_2020',
-            submodules=True, submodules_delete=['third-party/akantu'])
+    version('lammps_2020', branch='lammps_2020')
 
-    depends_on('akantu@master', )
+    depends_on('akantu@master', 'eigen')
 
     def cmake_args(self):
         spec = self.spec
