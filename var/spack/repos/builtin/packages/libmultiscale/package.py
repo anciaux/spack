@@ -35,7 +35,27 @@ class Libmultiscale(CMakePackage):
     version('lammps_2020', branch='lammps_2020')
 
     depends_on('akantu@master')
-    depends_on('eigen')
+
+    resource(
+        name='eigen',
+        git='https://gitlab.com/libeigen/eigen.git',
+        tag='master',
+        destination='third-party/'
+    )
+
+    resource(
+        name='pybind11',
+        git='https://github.com/pybind/pybind11.git',
+        tag='v2.5',
+        destination='third-party/'
+    )
+
+    resource(
+        name='lammps',
+        git='https://gitlab.com/libmultiscale/lammps.git',
+        tag='new_lammps',
+        destination='third-party/'
+    )
 
     def cmake_args(self):
         spec = self.spec
