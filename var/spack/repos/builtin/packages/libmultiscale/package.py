@@ -46,7 +46,7 @@ class Libmultiscale(CMakePackage):
     resource(
         name='pybind11',
         git='https://github.com/pybind/pybind11.git',
-        tag='v2.5',
+        tag='v2.6.2',
         destination='third-party/'
     )
 
