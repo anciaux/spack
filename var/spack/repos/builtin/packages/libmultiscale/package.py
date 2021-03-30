@@ -39,7 +39,7 @@ class Libmultiscale(CMakePackage):
     resource(
         name='eigen',
         git='https://gitlab.com/libeigen/eigen.git',
-        tag='master',
+        tag='3.4.0-rc1',
         destination='third-party/'
     )
 
