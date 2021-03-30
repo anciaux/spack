@@ -71,5 +71,9 @@ class Libmultiscale(CMakePackage):
         return args
 
     def cmake(self, spec, prefix):
-        super().cmake(spec, prefix)
-        super().cmake(spec, prefix)
+        try:
+            super().cmake(spec, prefix)
+            super().cmake(spec, prefix)
+        except Exception:
+            super(Libmultiscale, self).cmake(spec, prefix)
+            super(Libmultiscale, self).cmake(spec, prefix)
