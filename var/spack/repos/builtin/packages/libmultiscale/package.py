@@ -68,9 +68,7 @@ class Libmultiscale(CMakePackage):
             '-DLIBMULTISCALE_AKANTU_PLUGIN:BOOL=ON',
             '-DLIBMULTISCALE_MD1D:BOOL=ON',
             '-DLIBMULTISCALE_MECA1D:BOOL=ON',
-            '-DLIBMULTISCALE_LAMMPS_PLUGIN:BOOL=ON',
-            '-DLIBMULTISCALE_DOCUMENTATION:BOOL=ON ',
-            '-DLIBMULTISCALE_TESTS:BOOL=ON'
+            '-DLIBMULTISCALE_LAMMPS_PLUGIN:BOOL=ON'
         ]
         return args
 
