@@ -39,7 +39,7 @@ class Libmultiscale(CMakePackage):
     depends_on('lapack')
     depends_on('fftw')
     depends_on('gsl')
-    depends_on('python@3.5.10')
+    depends_on('python@3.5.10:')
 
     resource(
         name='eigen',
