@@ -38,6 +38,7 @@ class Libmultiscale(CMakePackage):
     depends_on('expat')
     depends_on('lapack')
     depends_on('fftw')
+    depends_on('gsl')
 
     resource(
         name='eigen',
