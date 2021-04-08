@@ -65,7 +65,6 @@ class Libmultiscale(CMakePackage):
     def cmake_args(self):
         spec = self.spec
         args = [
-            '-DCMAKE_BUILD_TYPE:STRING=$BUILD_TYPE',
             '-DLIBMULTISCALE_AKANTU_PLUGIN:BOOL=ON',
             '-DLIBMULTISCALE_MD1D:BOOL=ON',
             '-DLIBMULTISCALE_MECA1D:BOOL=ON',
