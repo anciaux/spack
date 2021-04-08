@@ -34,7 +34,7 @@ class Libmultiscale(CMakePackage):
 
     version('lammps_2020', branch='lammps_2020')
 
-    depends_on('akantu@master')
+    depends_on('akantu@master', 'expat')
 
     resource(
         name='eigen',
