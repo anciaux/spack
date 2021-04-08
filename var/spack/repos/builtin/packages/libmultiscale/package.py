@@ -37,6 +37,7 @@ class Libmultiscale(CMakePackage):
     depends_on('akantu@master')
     depends_on('expat')
     depends_on('lapack')
+    depends_on('fftw')
 
     resource(
         name='eigen',
