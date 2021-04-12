@@ -27,7 +27,7 @@ class Libmultiscale(CMakePackage):
     """LibMultiScale is a C++/python parallel framework for the multiscale
        coupling methods dedicated to material simulations """
 
-    homepage = "hhttps://libmultiscale.gitlab.io/libmultiscal"
+    homepage = "https://libmultiscale.gitlab.io/libmultiscale"
     git = "https://gitlab.com/libmultiscale/libmultiscale.git"
 
     maintainers = ['anciaux']
